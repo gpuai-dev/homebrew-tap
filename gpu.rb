@@ -10,16 +10,16 @@ class Gpu < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gpuai-dev/gpu-ai/releases/download/v1.0.0/gpu_1.0.0_darwin_amd64.tar.gz"
-      sha256 "5ad7892da6699c7a478edf15ebf7ef5ccec2105fb1dab748ef42d006f1ad2852"
+      url "https://github.com/gpuai-dev/gpu-cli/releases/download/v1.0.0/gpu_1.0.0_darwin_amd64.tar.gz"
+      sha256 "dbe2ccfbc9c6c0168613f1b2ef9c53eecbbdc04be781637cf4436aec5cff1087"
 
       define_method(:install) do
         bin.install "gpu"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gpuai-dev/gpu-ai/releases/download/v1.0.0/gpu_1.0.0_darwin_arm64.tar.gz"
-      sha256 "57f31a099c37cd9123f1adccc934837367f7d86c03083999fda4d7d8224b5e79"
+      url "https://github.com/gpuai-dev/gpu-cli/releases/download/v1.0.0/gpu_1.0.0_darwin_arm64.tar.gz"
+      sha256 "60912bf82e567bf12195da8c17697ac827b40344420e31a61ec525a974b24861"
 
       define_method(:install) do
         bin.install "gpu"
@@ -29,15 +29,15 @@ class Gpu < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gpuai-dev/gpu-ai/releases/download/v1.0.0/gpu_1.0.0_linux_amd64.tar.gz"
-      sha256 "fdfc83ecd2ac48f899f3b143f334f1029c4c8e6fabd79a2af8503fa26ed1a098"
+      url "https://github.com/gpuai-dev/gpu-cli/releases/download/v1.0.0/gpu_1.0.0_linux_amd64.tar.gz"
+      sha256 "69293eb7eec47a8726d2bc0fa4d8ca2058e46161e4e6c5a233c1037243929b85"
       define_method(:install) do
         bin.install "gpu"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gpuai-dev/gpu-ai/releases/download/v1.0.0/gpu_1.0.0_linux_arm64.tar.gz"
-      sha256 "975a6b07c749134e36f1c45d6cc733322f0fbde265371c3226f61e341da18668"
+      url "https://github.com/gpuai-dev/gpu-cli/releases/download/v1.0.0/gpu_1.0.0_linux_arm64.tar.gz"
+      sha256 "4f5492a38b5c8edfe89f233f8c94e4419a86ae24c3727279d857ed50ad2d00cf"
       define_method(:install) do
         bin.install "gpu"
       end
