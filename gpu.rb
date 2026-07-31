@@ -5,21 +5,21 @@
 class Gpu < Formula
   desc "GPU.ai command-line interface — provision and manage GPU instances from your terminal."
   homepage "https://gpu.ai"
-  version "1.1"
+  version "1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gpuai-dev/gpu-cli/releases/download/v1.1/gpu_1.1_darwin_amd64.tar.gz"
-      sha256 "329f1f57b3bb68e2156a7196563aab7c087cb81b88a79c61fe246442e07484a5"
+      url "https://github.com/gpuai-dev/gpu-cli/releases/download/v1.2/gpu_1.2_darwin_amd64.tar.gz"
+      sha256 "84910420bba7d70c7f9a40ef5f9764db02c1ae73e25e77425347354a1b7b0b63"
 
       define_method(:install) do
         bin.install "gpu"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gpuai-dev/gpu-cli/releases/download/v1.1/gpu_1.1_darwin_arm64.tar.gz"
-      sha256 "7aebc44a7bdd5abdc11e0809fe6e6019d1de86a876a2feac227a188a1ec1527f"
+      url "https://github.com/gpuai-dev/gpu-cli/releases/download/v1.2/gpu_1.2_darwin_arm64.tar.gz"
+      sha256 "ac2dd156869e3b0824b733127e480456e09b228ad189c4019d46348160bc45e9"
 
       define_method(:install) do
         bin.install "gpu"
@@ -29,15 +29,15 @@ class Gpu < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gpuai-dev/gpu-cli/releases/download/v1.1/gpu_1.1_linux_amd64.tar.gz"
-      sha256 "b6b49a2d477818e5550bfd83f4a9981e0fca88abab6127d2af9fae22f01b3043"
+      url "https://github.com/gpuai-dev/gpu-cli/releases/download/v1.2/gpu_1.2_linux_amd64.tar.gz"
+      sha256 "178ff45cc13d65171a9750e1ff777423d6af53993e4613eaf2768dbc0a9165e6"
       define_method(:install) do
         bin.install "gpu"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gpuai-dev/gpu-cli/releases/download/v1.1/gpu_1.1_linux_arm64.tar.gz"
-      sha256 "bdc2e55db04b0ce06a0f2b2403d9677ab2770b7bca895097eb136a4346760e5d"
+      url "https://github.com/gpuai-dev/gpu-cli/releases/download/v1.2/gpu_1.2_linux_arm64.tar.gz"
+      sha256 "fd39cf6bc34b8d9ec8a6678c202640f589660346190fe991678a0f3d206ad851"
       define_method(:install) do
         bin.install "gpu"
       end
